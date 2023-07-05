@@ -1,5 +1,5 @@
 package oops;
-//example of multiple inheritance
+//example of multilevel inheritance
 public class Animal1 
 {
 	//fields and methods
