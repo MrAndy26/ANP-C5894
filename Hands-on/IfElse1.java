@@ -14,13 +14,17 @@ public class IfElse1 {
 	int a=s.nextInt();
 	
 	//Condition
-	if(a>=0)
+	if(a>0)
 	{
 		System.out.println("Positive");
 	}
-	else
+	else if(a<0)
 	{
 		System.out.println("Negative");
+	}
+	else
+	{
+		System.out.println("Number is 0");
 	}
 	}
 
