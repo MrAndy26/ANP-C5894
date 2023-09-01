@@ -1,43 +1,50 @@
 package loops;
-/*Write a program that prints the Fibonacci series up to a specified limit entered by the user. 
- *However, skip printing numbers that are divisible by 3. 
- *Use the continue statement to skip such numbers.*/
 import java.util.Scanner;
-public class FibonacciSeries 
+public class FibonacciSeries
 {
-	public static void main(String[] args) 
-	{
-		//scanner class to take input from user
-		Scanner sc = new Scanner(System.in);
-		//get the limit from user
-		System.out.print("Enter the limit for the Fibonacci series: ");
-		//integer input from user
-        int limit = sc.nextInt();
+	    public static void main(String[] args) 
+	    {
+	        // Get the number of iterations from the user
+	        Scanner sc = new Scanner(System.in);
 
-        //declaring and initializing num1 by 0
-        int num1 = 0;
-        //declaring and initializing num2 by 0
-        int num2 = 1;
-        //declaring and initializing sum by addition of num1 and num2
-        int sum = num1 + num2;
+	        // Prompt the user for the limit
+	        System.out.print("Enter the limit: ");
+	        int limit = sc.nextInt();
+	         
+	        // Initialize the Fibonacci series variables
+	        int firstNum = 0;
+	        int secondNum = 1;
 
-        System.out.println("Fibonacci series up to " + limit + ":");
-        System.out.print(num1 + " " + num2 + " ");
-        
-        //while condition to sum is less than equal to limit enter by user
-        while (sum <= limit) 
-        {
-            num1 = num2;
-            num2 = sum;
-            System.out.print(sum + " ");
-            sum = num1 + num2;
-            
-            //if condition to check sum is divisible by 3
-            if (sum % 3 == 0) 
-            {
-            	//skip the number divisible by 3
-                continue;
-            }
-        }
-    }
-}
+	        // Print the Fibonacci series
+	        System.out.println("Fibonacci series:");
+
+	        while (firstNum >= limit)
+	        {
+	            if (firstNum <= limit)
+	            {
+	                if (firstNum % 3 == 0)
+	                {
+	                    firstNum = firstNum + secondNum;
+	                    secondNum = firstNum - secondNum;
+	                    continue;
+	                }
+
+	                System.out.println(firstNum);
+	            } 
+	            
+	            else
+	            	
+	            {
+	                break;
+	            }
+
+	            // Calculate the next Fibonacci number
+	            int nextNum = firstNum + secondNum;
+	            
+	            firstNum = secondNum;
+	            
+	            secondNum = nextNum;
+	        }
+	        sc.close();
+	    }
+	}

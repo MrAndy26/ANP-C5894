@@ -13,51 +13,52 @@ Handle input validation to ensure the grade is within the valid range.*/
 import java.util.Scanner;
 public class GradeCalculator 
 {
-
-	public static void main(String[] args) 
+	public static void main(String[] args)
 	{
-		//input from user
+		//input from the user
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter a numerical grade (0-100):");
+		System.out.println("Enter a numerical grade (0-100): ");
 		
-		//input for grade
+		//integer input for grade
 		int grade=sc.nextInt();
 		
 		//declaring variable
 		String lettergrade;
 		
 		//if condition to check grade is greater than equal to 0 and less than equal to 100.
-		if(grade>=0 && grade<=100)
+		if (grade >= 0 && grade <= 100) 
 		{
-		//switch case
-		switch(grade/10)
-		{
-		  case 10:
-		  case 9:
-		  lettergrade="A";
-		  break;
-		  
-		  case 8:
-		  lettergrade="B";
-		  break;
-		  
-		  case 7:
-		  lettergrade="C";
-		  break;
-		 
-		  case 6:
-		  lettergrade="D";
-		  break;
-		  
-		  default:
-		  lettergrade="E";
-		  break;
-		}
-		System.out.println("The Lettergrade is "+lettergrade);
-	 }
-		else
-		{
-			System.out.println("Handle input validation to ensure the grade is within the valid range.");
-		}
-    }
+			//switch case
+			switch (grade / 10) 
+            {
+                case 10:
+                case 9:
+                    lettergrade = "A";
+                    break;
+                case 8:
+                    lettergrade = "B";
+                    break;
+                case 7:
+                    lettergrade = "C";
+                    break;
+                case 6:
+                    lettergrade = "D";
+                    break;
+                default:
+                    lettergrade = "E";
+                    break;
+                   
+            }
+            System.out.println("Letter grade: " + lettergrade);
+        } 
+		else 
+        {
+            System.out.println("Invalid grade. Please enter a grade between 0 and 100.");
+        
+        }
+		
+	}
 }
+
+           
+
