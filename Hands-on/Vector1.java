@@ -1,4 +1,4 @@
-package Collection;
+package collections;
 /*Create a program that represents a basic playlist using a Vector to store song names. Implement methods to:
 a. Add songs to the playlist.
 b. Display the current playlist.
@@ -12,10 +12,10 @@ public class Vector1
 		Vector<String> song = new Vector<>();
 		
 		//Adding the songs to the playlist
-		song.add("ye sham mastani");
-		song.add(" Legend by Siddhu moose wala");
-		song.add("Old Skool by Siddhu moose wala");
-		song.add("Hulara");
+		song.add("Tu hi re");
+		song.add(" Beliver ");
+		song.add("Ye Dosti");
+		song.add("Phir or kya chahiye");
 		
 		//Displaying the current playlist
 		System.out.println("The Current playlist of songs is: "+song);

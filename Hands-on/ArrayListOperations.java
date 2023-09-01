@@ -1,4 +1,4 @@
-package Collection;
+package collections;
 /*.Write a Java program to create an ArrayList of integers and perform the following operations:
 a. Add elements to the ArrayList.
 b. Remove an element from a specific index.
